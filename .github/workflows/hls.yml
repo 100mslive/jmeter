@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -28,7 +28,7 @@ jobs:
       - name: JMeter Test
         uses: QAInsights/PerfAction@v3.1
         with:
-          test-plan-path: ./jmeter/hls-chunks.jmx
+          test-plan-path: ./hls-chunks.jmx
           args: ""
       - name: Upload Results
         uses: actions/upload-artifact@v2
